@@ -1,0 +1,25 @@
+<%= form_tag controller: :zaimauths, action: :create do %>
+	<%= select_tag :category_id, options_for_select(@categories.values) %>
+	<%= text_field_tag :genre_id, '', size: 30 %>
+	<%= text_field_tag :amount, '', size: 30 %>
+	<%= submit_tag "記録する" %>
+
+<% end %>
+
+
+<%= link_to "ログアウト", logout_path, method: :delete %>
+
+<%# <% @response["money"].each do |money| %>
+<%# 	<%= money %>
+<%# 	<%= money["date"] %>
+<%# 	<%= money["category_id"] %>
+<%# 	<br>
+<%# <% end %>
+
+<%# <%= @category %>
+<%# <% @category["categories"].each do |category| %>
+<%# 	<%= category["name"] %>
+<%# 	<br>
+<%# <% end %>
+
+<%# <%= link_to "削除する",:destroy, method: :delete %>
